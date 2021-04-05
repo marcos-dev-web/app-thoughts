@@ -5,7 +5,7 @@ const app = express();
 
 const router = require('./routes');
 
-app.use(express.static(path.resolve('public')));
+app.use(express.static(path.resolve('src', 'public')));
 app.use(router);
 
 
