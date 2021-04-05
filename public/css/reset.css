@@ -19,6 +19,11 @@ body {
   color: var(--text);
 }
 
+*::selection {
+  background: #201128;
+  color: #f9f9f9;
+}
+
 @media screen and (max-width: 1000px) {
   html {
     font-size: 93.75%;

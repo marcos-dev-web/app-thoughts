@@ -10,6 +10,8 @@
   width: min(60vw, 400px);
   height: 100%;
 
+  border-left: 2px solid var(--primary);
+
   background: var(--secondary-background);
 
   transition: all 200ms linear;
@@ -72,12 +74,38 @@
   cursor: pointer;
   background: var(--items-background);
 
+  user-select: none;
+  -webkit-user-select: none;
   transition: all 100ms linear;
 }
 
+.menubar__item::before {
+  content: "";
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 10px;
+  height: 100%;
+
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  transition: all 100ms linear;
+
+  background: var(--primary);
+}
+
+.menubar__item:not(:first-child) {
+  margin-top: 1.5rem;
+}
 
 .menubar__item:hover {
   background: var(--hover);
+}
+
+.menubar__item:hover::before {
+  background: var(--green);
 }
 
 .menubar__item:active {

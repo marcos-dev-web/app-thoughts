@@ -1,0 +1,14 @@
+{
+  "name": "thinks",
+  "version": "1.0.0",
+  "description": "write yours thinks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "marcos-dev-web",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
