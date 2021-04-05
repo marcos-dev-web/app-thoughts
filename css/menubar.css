@@ -1,0 +1,85 @@
+.menubar {
+  position: fixed;
+  top: 0;
+  right: -100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: min(60vw, 400px);
+  height: 100%;
+
+  background: var(--secondary-background);
+
+  transition: all 200ms linear;
+
+  z-index: 200;
+}
+
+.menubutton {
+  position: fixed;
+  right: 10px;
+  top: 10px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  border-radius: 50%;
+  transition: all 100ms linear;
+  cursor: pointer;
+
+  z-index: 300;
+}
+
+.menubutton:hover {
+  background: var(--hover);
+}
+
+.menubutton::before {
+  border-radius: 50%;
+}
+
+.menubar-opened {
+  right: 0;
+}
+
+.menubar__options {
+  width: 90%;
+  height: 80%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.menubar__item {
+  position: relative;
+  width: 100%;
+  padding: 5px 0;
+
+  border-radius: 3px;
+
+  text-align: center;
+  
+  user-select: none;
+  -webkit-user-select: none;
+
+  cursor: pointer;
+  background: var(--items-background);
+
+  transition: all 100ms linear;
+}
+
+
+.menubar__item:hover {
+  background: var(--hover);
+}
+
+.menubar__item:active {
+  background: var(--active);
+}

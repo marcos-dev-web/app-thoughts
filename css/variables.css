@@ -1,0 +1,17 @@
+:root {
+  --primary-background: #121214;
+  --secondary-background: #1a1a1f;
+
+  --items-background: #2a2a30;
+
+  --hover: #4a4a57;
+  --active: #8282a594;
+
+  --text: #f2f3f5;
+
+  --primary: #8257e6;
+  --hover-primary: #9466ff;
+
+  --green: #04d361;
+  --red: #e83f5b;
+}

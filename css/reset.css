@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  transition: all 50ms linear;
+  outline-color: dodgerblue;
+  font-family: Ubuntu, Roboto, 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Cantarell, 'Helvetica Neue', sans-serif;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--primary-background);
+  color: var(--text);
+}
+
+@media screen and (max-width: 1000px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 87.5%;
+  }
+}
