@@ -20,23 +20,24 @@
           <i class="fas fa-ellipsis-v" tabindex="1"></i>
         </div>
         <section class="menubar__options">
-          <div class="menubar__item" title="Favorites" tabindex="2"><h4>Favorites</h4></div>
-          <div class="menubar__item" title="New thought" tabindex="3"><h4>New thought</h4></div>
-          <div class="menubar__item" title="All thoughts" tabindex="4"><h4>All thoughts</h4></div>
+          <div class="menubar__item" title="Favorites" tabindex="2" onclick="href('fav')"><h4>Favorites</h4></div>
+          <div class="menubar__item" title="New thought" tabindex="3" onclick="href('new')"><h4>New thought</h4></div>
+          <div class="menubar__item" title="All thoughts" tabindex="4" onclick="href('all')"><h4>All thoughts</h4></div>
         </section>
       </aside>
       <div class="title_home">
         <h1 class="title_big">Write here all your <span class="thought">thoughts</span>.</h1>
         <h1 class="title_big">
-          here you can <a href="#" tabindex="5">write</a> here and don't lose your <span class="thought">thoughts</span>.
+          here you can <a href="/new" tabindex="5">write</a> here and don't lose your <span class="thought">thoughts</span>.
         </h1>
       </div>
       <div class="description">
         <p class="description_text">
-          here you can <a href="#" tabindex="6">write</a>, bookmark, edit or even delete that thought of yours.
+          here you can <a href="/new" tabindex="6">write</a>, bookmark, edit or even delete that thought of yours.
         </p>
       </div>
     </section>
+  </main>
     <footer class="footer">
       <div class="content__footer">
         <aside class="socials aside">
@@ -50,7 +51,24 @@
         </aside>
       </div>
     </footer>
-  </main>
   <script type="module" src="./js/index.js"></script>
+  <script>
+    let time = null;
+    function href(location) {
+      const acceptLocations = ['new', 'fav', 'all'];
+
+      if (time) {
+        clearTimeout(time);
+      }
+
+      if (!acceptLocations.some(l => l === location)) {
+        return false;
+      }
+
+      time = setTimeout(() => {
+        window.location.href = `/${location}`
+      }, 300)
+    }
+  </script>
 </body>
 </html>

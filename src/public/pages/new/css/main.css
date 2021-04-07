@@ -1,0 +1,99 @@
+body {
+  height: 100vh;
+  min-height: auto;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+
+  width: min(400px, 90vw);
+  padding: 1rem;
+
+  border: 2px solid transparent;
+  border-radius: 4px;
+
+  background: var(--secondary-background);
+  transition: all 200ms linear;
+}
+
+#form .input:focus form {
+  border: 1px solid var(--primary);
+}
+
+.input {
+  width: 100%;
+
+  font-size: 1.2rem;
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 8px;
+
+  padding: 0.3rem 0.4rem;
+
+  transition: all 100ms linear;
+
+  background: var(--text);
+  color: #404452;
+}
+
+.input:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.input:focus {
+  border-color: var(--primary);
+}
+
+textarea {
+  resize: vertical;
+  max-height: min(200px, 30vh);
+  min-height: 2rem;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.button {
+  text-align: center;
+
+  margin-top: 1rem;
+  width: min(100px, 90%);
+  padding: 0.3rem;
+
+  font-size: 1.3rem;
+  cursor: pointer;
+  
+  outline-color: var(--primary);
+  border: none;
+  border-radius: 7px;
+  
+  color: var(--text);
+}
+
+#submit {
+  background-color: var(--green);
+}
+
+#cancel {
+  background-color: var(--red);
+}
+
+#cancel:hover {
+  transition: all 100ms linear;
+  color: var(--text);
+
+  background: var(--hover-red);
+}
+
+#submit:hover {
+  transition: all 100ms linear;
+
+  background: var(--hover-green);
+}

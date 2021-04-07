@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New thought</title>
+    <link rel="stylesheet" href="/css/variables.css" />
+    <link rel="stylesheet" href="/css/reset.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container new">
+      <form action="/new" method="post" id="form" autocomplete="off">
+        <input
+          type="text"
+          class="input"
+          name="title"
+          autocomplet="off"
+          id="title"
+          placeholder="Title"
+        />
+        <textarea
+          class="input"
+          name="text"
+          autocomplete="off"
+          id="text"
+          placeholder="Text"
+        ></textarea>
+
+        <div class="buttons">
+          <a href="/" id="cancel" class="button">Cancel</a>
+          <input type="submit" class="button" id="submit" value="save" />
+        </div>
+      </form>
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+      integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/sbmit.js"></script>
+    <script>
+      const inputs = [...document.getElementsByClassName("input")];
+
+      inputs.forEach((input) => {
+        input.onfocus = () => {
+          form.style = `
+          box-shadow: 0px 0px 5px 2px var(--primary);
+          border-color: '#8257e6';`;
+        };
+
+        input.onblur = () => {
+          form.removeAttribute("style");
+        };
+      });
+    </script>
+  </body>
+</html>
